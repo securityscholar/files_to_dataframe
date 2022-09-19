@@ -1,0 +1,8 @@
+my_dir_path = 'D:/DEF_14_GOOD/'
+
+results = defaultdict(list)
+for file in Path(my_dir_path).iterdir():
+    with open(file, "r", encoding='latin') as file_open:
+        results["file_name"].append(file.name)
+        results["text"].append(file_open.read())
+df = pd.DataFrame(results)
